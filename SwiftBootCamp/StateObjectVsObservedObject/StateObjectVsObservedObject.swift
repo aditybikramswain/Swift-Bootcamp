@@ -45,9 +45,7 @@ struct StateObjectVsObservedObject: View {
                 
             }
             VStack {
-                NavigationLink("Seccond") {
-                    SecondView()
-                }
+                StateObjectSubView()
             }
             .padding()
         }
@@ -85,26 +83,6 @@ struct StateObjectSubView: View {
                 
             
         }
-    }
-}
-struct SecondView: View {
-    var body: some View {
-        VStack {
-            StateObjectSubView()
-                .padding(.vertical)
-        }
-        NavigationLink("Second View is the") {
-            ThirdView()
-        }
-       
-        
-        
-    }
-}
-
-struct ThirdView: View {
-    var body: some View {
-        Text("Second View is the")
     }
 }
 #Preview {

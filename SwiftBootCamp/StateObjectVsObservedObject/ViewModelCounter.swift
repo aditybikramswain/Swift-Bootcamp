@@ -9,10 +9,16 @@ import Foundation
 import Combine
 class ViewModelCounter: ObservableObject {
     @Published var count = 0
-    @MainActor
+ 
+    init() {
+        print("Intilized the view model")
+    }
+    
     func incremnet() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             self?.count += 1
+           // self?.incremnet()
+            
         }
     }
     
